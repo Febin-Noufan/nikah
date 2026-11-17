@@ -1,0 +1,271 @@
+/* Layout: one narrow column. A mihrab-shaped arch holds the names; date, countdown and venue sit below on the plain ground. */
+:root {
+  --bg: #eef3ee;
+  --fg: #14301f;
+  --muted: #4d6355;
+  --accent: #8a6414;
+  --line: #c9d6cb;
+  --panel: #0f3a29;
+  --panel-fg: #f3efe0;
+  --panel-gold: #dcbc6c;
+  --chip: #ffffff;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Jost", "Helvetica Neue", Arial, sans-serif;
+  --font-arabic: "Amiri", "Noto Naskh Arabic", "Traditional Arabic", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #09160f;
+    --fg: #ece8d8;
+    --muted: #9db3a4;
+    --accent: #dcbc6c;
+    --line: #1f3a2c;
+    --panel: #0f3a29;
+    --panel-fg: #f3efe0;
+    --panel-gold: #dcbc6c;
+    --chip: #10241a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #09160f;
+  --fg: #ece8d8;
+  --muted: #9db3a4;
+  --accent: #dcbc6c;
+  --line: #1f3a2c;
+  --panel: #0f3a29;
+  --panel-fg: #f3efe0;
+  --panel-gold: #dcbc6c;
+  --chip: #10241a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 40px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main {
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.bismillah {
+  font-family: var(--font-arabic);
+  font-size: 1.7rem;
+  line-height: 1.4;
+  color: var(--accent);
+  margin: 0;
+  text-align: center;
+}
+
+/* Arch */
+.arch {
+  position: relative;
+  width: 100%;
+  background-color: var(--panel);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23dcbc6c' stroke-opacity='.16' stroke-width='1'%3E%3Crect x='11' y='11' width='34' height='34'/%3E%3Crect x='11' y='11' width='34' height='34' transform='rotate(45 28 28)'/%3E%3Ccircle cx='28' cy='28' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  color: var(--panel-fg);
+  border-radius: 270px 270px 22px 22px;
+  padding: 88px 28px 56px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.arch::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid var(--panel-gold);
+  border-radius: 260px 260px 14px 14px;
+  opacity: .55;
+  pointer-events: none;
+}
+.eyebrow {
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--panel-gold);
+  margin: 0;
+}
+.names {
+  margin: 8px 0 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 11vw, 3.7rem);
+  line-height: 1.05;
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.names .amp {
+  font-style: italic;
+  font-weight: 400;
+  font-size: .6em;
+  color: var(--panel-gold);
+  line-height: 1.2;
+}
+.occasion {
+  margin: 10px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--panel-fg);
+  opacity: .9;
+}
+
+/* Date */
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+.date .weekday {
+  font-size: .8rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.date .day {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(5rem, 24vw, 7.5rem);
+  line-height: .95;
+  color: var(--accent);
+  font-variant-numeric: lining-nums;
+}
+.date .month {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  letter-spacing: .04em;
+}
+.date .time {
+  margin-top: 10px;
+  padding: 6px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variant-numeric: lining-nums;
+}
+
+/* Countdown */
+.countdown {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.countdown .unit {
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 4px 10px;
+  text-align: center;
+}
+.countdown .num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 8vw, 2.4rem);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.countdown .lbl {
+  display: block;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.done {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* Venue */
+.venue {
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+.venue .label {
+  font-size: .78rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.venue h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 8vw, 2.5rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font: 500 .92rem/1 var(--font-body);
+  letter-spacing: .04em;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.btn:hover { filter: brightness(1.08); }
+
+.foot {
+  margin: 0;
+  max-width: 34ch;
+  text-align: center;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.foot strong { font-weight: 500; color: var(--fg); }
+
+@media (max-width: 420px) {
+  .arch { padding: 76px 20px 48px; }
+  .countdown { gap: 8px; }
+}
