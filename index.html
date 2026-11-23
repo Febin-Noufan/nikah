@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="description" content="Save the date for the Nikah of Febin Noufan and Fathima Shihana, 27 November 2026, 9:00 AM, Kozhunjil Jumah Masjid.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05130d">
+<meta name="description" content="Save the date for the Nikah of Febin Noufan and Fathima Shihana, Friday 27 November 2026, 9:00 AM, Kozhunjil Jumah Masjid.">
 <title>Febin &amp; Shihana Nikah</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,47 +13,214 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="star" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+        <rect x="20" y="20" width="60" height="60"/>
+        <rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)"/>
+        <circle cx="50" cy="50" r="19"/>
+        <circle cx="50" cy="50" r="5"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+ 
+<div class="curtain" aria-hidden="true">
+  <div class="half l"></div>
+  <div class="half r"></div>
+  <svg class="seal"><use href="#star"/></svg>
+</div>
+ 
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="sparkles" aria-hidden="true"></canvas>
+ 
 <main>
-  <p class="bismillah" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</p>
-
-  <section class="arch" aria-label="Nikah of Febin Noufan and Fathima Shihana">
-    <p class="eyebrow">Save the date</p>
-    <h1 class="names">
-      <span>Febin Noufan</span>
-      <span class="amp">&amp;</span>
-      <span>Fathima Shihana</span>
-    </h1>
-    <p class="occasion">Nikah</p>
+ 
+  <header class="hero">
+    <div class="sky intro" style="--at:1.4s" aria-hidden="true">
+      <svg class="lantern a" viewBox="0 0 60 150" width="60" height="150">
+        <defs>
+          <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffe9a6" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#e3c26f" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="bodyA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f3dc95"/>
+            <stop offset="1" stop-color="#b58a2c"/>
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="30" cy="72" r="34" fill="url(#glowA)"/>
+        <path d="M30 0V40" stroke="#e3c26f" stroke-width="1.2" fill="none"/>
+        <path d="M19 40h22l-3 8H22z" fill="#b58a2c"/>
+        <path d="M17 48h26c4 14 4 34 0 48H17c-4-14-4-34 0-48z" fill="url(#bodyA)" fill-opacity=".85" stroke="#f3dc95" stroke-width="1"/>
+        <path d="M30 48v48M22 48c-3 16-3 32 0 48M38 48c3 16 3 32 0 48" stroke="#5a3f08" stroke-opacity=".55" stroke-width=".9" fill="none"/>
+        <ellipse class="flame" cx="30" cy="72" rx="4" ry="8" fill="#fff6d0"/>
+        <path d="M22 96h16l-3 8H25z" fill="#b58a2c"/>
+        <path d="M30 104v14" stroke="#e3c26f" stroke-width="1.2"/>
+        <circle cx="30" cy="121" r="3" fill="#e3c26f"/>
+      </svg>
+ 
+      <svg class="crescent" viewBox="0 0 100 100" width="90" height="90">
+        <defs>
+          <mask id="cres">
+            <rect width="100" height="100" fill="#fff"/>
+            <circle cx="62" cy="44" r="25" fill="#000"/>
+          </mask>
+        </defs>
+        <circle cx="46" cy="52" r="28" fill="#f3dc95" mask="url(#cres)"/>
+        <path class="twinkle" d="M74 22l2.6 6.4L83 31l-6.4 2.6L74 40l-2.6-6.4L65 31l6.4-2.6z" fill="#fff3c4"/>
+      </svg>
+ 
+      <svg class="lantern b" viewBox="0 30 60 120" width="60" height="120">
+        <defs>
+          <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffe9a6" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#e3c26f" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="bodyB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f3dc95"/>
+            <stop offset="1" stop-color="#b58a2c"/>
+          </linearGradient>
+        </defs>
+        <circle class="halo" cx="30" cy="72" r="34" fill="url(#glowB)"/>
+        <path d="M30 0V40" stroke="#e3c26f" stroke-width="1.2" fill="none"/>
+        <path d="M19 40h22l-3 8H22z" fill="#b58a2c"/>
+        <path d="M17 48h26c4 14 4 34 0 48H17c-4-14-4-34 0-48z" fill="url(#bodyB)" fill-opacity=".85" stroke="#f3dc95" stroke-width="1"/>
+        <path d="M30 48v48M22 48c-3 16-3 32 0 48M38 48c3 16 3 32 0 48" stroke="#5a3f08" stroke-opacity=".55" stroke-width=".9" fill="none"/>
+        <ellipse class="flame" cx="30" cy="72" rx="4" ry="8" fill="#fff6d0"/>
+        <path d="M22 96h16l-3 8H25z" fill="#b58a2c"/>
+        <path d="M30 104v14" stroke="#e3c26f" stroke-width="1.2"/>
+        <circle cx="30" cy="121" r="3" fill="#e3c26f"/>
+      </svg>
+    </div>
+ 
+    <p class="bismillah intro" style="--at:1.7s" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</p>
+ 
+    <section class="arch intro" style="--at:1.9s" aria-label="Nikah of Febin Noufan and Fathima Shihana">
+      <svg class="bgstar s1" aria-hidden="true"><use href="#star"/></svg>
+      <svg class="bgstar s2" aria-hidden="true"><use href="#star"/></svg>
+      <p class="eyebrow">Save the date</p>
+      <h1 class="names">
+        <span class="name" data-split style="--base:2.2s">Febin Noufan</span>
+        <span class="amp">&amp;</span>
+        <span class="name" data-split style="--base:2.9s">Fathima Shihana</span>
+      </h1>
+      <p class="occasion">Nikah</p>
+      <p class="dateline">27 &middot; 11 &middot; 2026</p>
+    </section>
+  </header>
+ 
+  <div class="ribbon reveal" aria-hidden="true">
+    <div class="track">
+      <span><b>Save the date</b><svg class="dot"><use href="#star"/></svg><b>27 &middot; 11 &middot; 2026</b><svg class="dot"><use href="#star"/></svg><b>Nikah</b><svg class="dot"><use href="#star"/></svg><b>Kozhunjil Jumah Masjid</b><svg class="dot"><use href="#star"/></svg><b>9:00 AM</b><svg class="dot"><use href="#star"/></svg></span>
+      <span><b>Save the date</b><svg class="dot"><use href="#star"/></svg><b>27 &middot; 11 &middot; 2026</b><svg class="dot"><use href="#star"/></svg><b>Nikah</b><svg class="dot"><use href="#star"/></svg><b>Kozhunjil Jumah Masjid</b><svg class="dot"><use href="#star"/></svg><b>9:00 AM</b><svg class="dot"><use href="#star"/></svg></span>
+    </div>
+  </div>
+ 
+  <section class="date reveal" aria-label="Date and time">
+    <p class="label">Mark your calendar</p>
+    <div class="date-card">
+      <div class="date-big">
+        <span class="weekday">Friday</span>
+        <span class="day">27</span>
+        <span class="month">November 2026</span>
+        <span class="time">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path class="hand" d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          9:00 AM
+        </span>
+      </div>
+      <div class="calwrap">
+        <p class="calttl">November 2026</p>
+        <div class="cal" id="cal" role="img" aria-label="November 2026 calendar with Friday the 27th highlighted"></div>
+      </div>
+    </div>
   </section>
-
-  <section class="date" aria-label="Date">
-    <span class="weekday">Friday</span>
-    <span class="day">27</span>
-    <span class="month">November 2026</span>
-    <span class="time">9:00 AM</span>
-  </section>
-
-  <section id="countdown-wrap" style="width:100%" aria-label="Countdown to the Nikah">
-    <div class="countdown" id="countdown" role="timer" aria-live="off">
-      <div class="unit"><span class="num" id="cd-d">--</span><span class="lbl">Days</span></div>
-      <div class="unit"><span class="num" id="cd-h">--</span><span class="lbl">Hours</span></div>
-      <div class="unit"><span class="num" id="cd-m">--</span><span class="lbl">Minutes</span></div>
-      <div class="unit"><span class="num" id="cd-s">--</span><span class="lbl">Seconds</span></div>
+ 
+  <section class="count reveal" aria-label="Countdown to the Nikah">
+    <p class="label">Counting down, in shaa Allah</p>
+    <div class="tiles" id="countdown" role="timer" aria-live="off">
+      <div class="tile">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="44"/><circle class="bar" id="r-d" cx="50" cy="50" r="44" transform="rotate(-90 50 50)"/></svg>
+        <div class="tv"><span class="n" id="cd-d">--</span><span class="l">Days</span></div>
+      </div>
+      <div class="tile">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="44"/><circle class="bar" id="r-h" cx="50" cy="50" r="44" transform="rotate(-90 50 50)"/></svg>
+        <div class="tv"><span class="n" id="cd-h">--</span><span class="l">Hours</span></div>
+      </div>
+      <div class="tile">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="44"/><circle class="bar" id="r-m" cx="50" cy="50" r="44" transform="rotate(-90 50 50)"/></svg>
+        <div class="tv"><span class="n" id="cd-m">--</span><span class="l">Minutes</span></div>
+      </div>
+      <div class="tile">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="44"/><circle class="bar" id="r-s" cx="50" cy="50" r="44" transform="rotate(-90 50 50)"/></svg>
+        <div class="tv"><span class="n" id="cd-s">--</span><span class="l">Seconds</span></div>
+      </div>
     </div>
     <p class="done" id="cd-done" hidden></p>
   </section>
-
-  <section class="venue" aria-label="Venue">
-    <p class="label">Venue</p>
+ 
+  <section class="verse reveal" aria-label="Verse from the Qur'an">
+    <div class="divider" aria-hidden="true"><i></i><svg><use href="#star"/></svg><i></i></div>
+    <p class="ayah" lang="ar" dir="rtl">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+    <p class="trans">And among His signs is that He created for you mates from among yourselves, that you may find tranquillity in them, and He placed between you affection and mercy.</p>
+    <p class="cite">Qur'an 30:21 &middot; Ar-Rum</p>
+  </section>
+ 
+  <section class="venue reveal" aria-label="Venue">
+    <p class="label">The venue</p>
+    <svg class="mosque" viewBox="0 0 240 140" aria-hidden="true">
+      <path pathLength="1" style="--k:0" d="M10 128H230"/>
+      <path pathLength="1" style="--k:1" d="M70 128V84H170V128"/>
+      <path pathLength="1" style="--k:2" d="M78 84C78 36 162 36 162 84"/>
+      <path pathLength="1" style="--k:3" d="M120 48V34"/>
+      <path pathLength="1" style="--k:4" d="M116 30a4 4 0 1 0 8 0a4 4 0 1 0-8 0"/>
+      <path pathLength="1" style="--k:5" d="M30 128V60H44V128"/>
+      <path pathLength="1" style="--k:6" d="M28 60L37 44L46 60"/>
+      <path pathLength="1" style="--k:7" d="M37 44V38"/>
+      <path pathLength="1" style="--k:8" d="M196 128V60H210V128"/>
+      <path pathLength="1" style="--k:9" d="M194 60L203 44L212 60"/>
+      <path pathLength="1" style="--k:10" d="M203 44V38"/>
+      <path pathLength="1" style="--k:11" d="M26 76H48"/>
+      <path pathLength="1" style="--k:12" d="M192 76H214"/>
+      <path pathLength="1" style="--k:13" d="M108 128V108C108 92 132 92 132 108V128"/>
+      <path pathLength="1" style="--k:14" d="M84 112V102C84 95 94 95 94 102V112"/>
+      <path pathLength="1" style="--k:15" d="M146 112V102C146 95 156 95 156 102V112"/>
+    </svg>
     <h2>Kozhunjil Jumah Masjid</h2>
+    <p class="venue-note">Friday, 27 November 2026 &middot; 9:00 AM</p>
     <div class="actions">
       <a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=Kozhunjil+Jumah+Masjid" target="_blank" rel="noopener">Open in Maps</a>
-      <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Nikah%3A+Febin+Noufan+%26+Fathima+Shihana&amp;dates=20261127T090000/20261127T100000&amp;ctz=Asia%2FKolkata&amp;location=Kozhunjil+Jumah+Masjid&amp;details=Save+the+date+for+the+Nikah+of+Febin+Noufan+and+Fathima+Shihana.+Formal+invitation+to+follow." target="_blank" rel="noopener">Add to calendar</a>
+      <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Nikah%3A+Febin+Noufan+%26+Fathima+Shihana&amp;dates=20261127T090000/20261127T100000&amp;ctz=Asia%2FKolkata&amp;location=Kozhunjil+Jumah+Masjid&amp;details=Save+the+date+for+the+Nikah+of+Febin+Noufan+and+Fathima+Shihana.+Formal+invitation+to+follow." target="_blank" rel="noopener">Add to calendar</a>
     </div>
   </section>
-
-  <p class="foot"><strong>Formal invitation to follow.</strong> Please keep us in your duas and join us for the Nikah.</p>
+ 
+  <section class="dua reveal" aria-label="A dua for the couple">
+    <p class="label">A dua for the couple</p>
+    <p class="ayah small" lang="ar" dir="rtl">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+    <p class="trans">May Allah bless you both, send His blessings upon you both, and bring you together in goodness.</p>
+    <p class="cite">Your duas mean the world to us</p>
+  </section>
+ 
+  <section class="share reveal" aria-label="Share this invitation">
+    <p class="label">Share the news</p>
+    <div class="actions">
+      <a class="btn primary" id="wa" href="https://wa.me/?text=Save%20the%20date%21%20Nikah%20of%20Febin%20Noufan%20%26%20Fathima%20Shihana%2C%20Friday%2027%20November%202026%2C%209%3A00%20AM%20at%20Kozhunjil%20Jumah%20Masjid%2C%20in%20shaa%20Allah." target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="btn" id="copy" type="button">Copy link</button>
+    </div>
+  </section>
+ 
+  <footer class="foot reveal">
+    <p class="sign">Febin &amp; Shihana</p>
+    <p class="small">Formal invitation to follow. Jazakumullahu khayran for being part of our day.</p>
+  </footer>
+ 
 </main>
+ 
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+ 
 <script src="script.js"></script>
 </body>
 </html>
+ 
